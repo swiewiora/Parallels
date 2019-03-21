@@ -8,7 +8,7 @@ Procedury wykorzystujace funkcje standardowe C:
            correctly implemented in system
 
 UNIX procedures:
-  initialize_time - initialize time measurement
+  init_time - initialize time measurement
   print_time      - measures and prints CPU and clock time from initialization
   time_CPU        - prints CPU time from initialization
   time_clock      - prints clock time from initialization
@@ -46,10 +46,10 @@ double time_C()
 }
 
 /*---------------------------------------------------------
-initialize_time - initiates the measurement of time by giving 
+init_time - initiates the measurement of time by giving 
                   initial values to the structures tp, tzp and rp
 ---------------------------------------------------------*/
-void initialize_time()
+void init_time()
 {
   ct = clock();
   getrusage(RUSAGE_SELF, &rp);
