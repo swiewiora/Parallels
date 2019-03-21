@@ -60,9 +60,6 @@ main ()
 	 t1, 2.0e-9*SIZE/t1, (1.0+1.0/n)*8.0e-9*SIZE/t1);
 
   printf("\nBeginning of validation procedures\n");
-  // test
-//  printf("TEST\n");
-
 
   init_time();
   t1 = omp_get_wtime();
@@ -85,6 +82,4 @@ main ()
   for(i=0;i<DIMENSION;i++){
     if(fabs(y[i]-z[i])>1.e-9*z[i]) printf("Error!\n");
   }
-
-
 }
